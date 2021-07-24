@@ -81,7 +81,7 @@ module.exports = {
       filename: "remoteEntry.js",
       library: { type: "var", name: "core" },
       remotes: {
-        app: "app",
+        cachorros: "cachorros",
       },
       exposes: {
         "./history": "./src/shared/history",
