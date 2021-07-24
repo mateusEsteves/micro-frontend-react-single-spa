@@ -30,13 +30,13 @@ module.exports = {
             options: {
               presets: [
                 ["@babel/preset-env", { targets: "defaults" }],
-                "@babel/preset-react"
+                "@babel/preset-react",
               ],
             },
           },
           {
-            loader: 'ts-loader'
-          }
+            loader: "ts-loader",
+          },
         ],
       },
       {
@@ -48,10 +48,26 @@ module.exports = {
             options: {
               presets: [
                 ["@babel/preset-env", { targets: "defaults" }],
-                "@babel/preset-react"
+                "@babel/preset-react",
               ],
             },
-          }
+          },
+        ],
+      },
+      {
+        test: /\.s?css$/i,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                auto: true,
+                localIdentName: "[name]__[local]__[hash:base64:5]",
+              },
+            },
+          },
+          "sass-loader",
         ],
       },
     ],

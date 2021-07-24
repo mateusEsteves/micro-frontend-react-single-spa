@@ -1,0 +1,11 @@
+.app {
+  display: grid;
+  grid-template-columns: max(10%, 300px) auto;
+  grid-template-areas:
+    "cabecalho cabecalho"
+    "menuLateral conteudo";
+
+  &__microFrontend {
+    grid-area: conteudo;
+  }
+}
