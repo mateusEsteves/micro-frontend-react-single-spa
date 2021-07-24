@@ -1,13 +1,14 @@
 const path = require("path");
 const ModuleFederationPlugin =
   require("webpack").container.ModuleFederationPlugin;
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, "src", "index.js"),
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
-    publicPath: "http://localhost:3001/",
+    publicPath: "http://localhost:3000/app/",
   },
   devtool: "eval-source-map",
   devServer: {
@@ -50,5 +51,8 @@ module.exports = {
       },
       shared: ["react", "react-dom", "single-spa-react"],
     }),
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    })
   ],
 };
