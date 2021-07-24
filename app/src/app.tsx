@@ -1,6 +1,7 @@
 import React from "react";
 import { Router } from "react-router";
 import { Link, Route, Switch } from "react-router-dom";
+// @ts-ignore
 import history from "core/history";
 
 export default function App() {

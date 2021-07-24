@@ -7,7 +7,7 @@ const packageJson = require("./package.json");
 const { dependencies } = packageJson;
 
 module.exports = {
-  entry: path.resolve(__dirname, "src", "index.js"),
+  entry: path.resolve(__dirname, "src", "index"),
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
@@ -22,6 +22,24 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                ["@babel/preset-env", { targets: "defaults" }],
+                "@babel/preset-react"
+              ],
+            },
+          },
+          {
+            loader: 'ts-loader'
+          }
+        ],
+      },
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: [
@@ -30,16 +48,16 @@ module.exports = {
             options: {
               presets: [
                 ["@babel/preset-env", { targets: "defaults" }],
-                "@babel/preset-react",
+                "@babel/preset-react"
               ],
             },
-          },
+          }
         ],
       },
     ],
   },
   resolve: {
-    extensions: [".jsx", ".js", ".json"],
+    extensions: [".jsx", ".js", ".tsx", ".ts"],
   },
   plugins: [
     new ModuleFederationPlugin({
@@ -50,7 +68,7 @@ module.exports = {
         app: "app",
       },
       exposes: {
-        "./history": "./src/shared/history.js",
+        "./history": "./src/shared/history",
       },
       shared: {
         ...dependencies,
