@@ -4,8 +4,4 @@
   grid-template-areas:
     "cabecalho cabecalho"
     "menuLateral conteudo";
-
-  &__microFrontend {
-    grid-area: conteudo;
-  }
 }
