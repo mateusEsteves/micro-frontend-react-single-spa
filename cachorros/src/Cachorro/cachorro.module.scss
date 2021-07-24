@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__imagem {
+    width: 80%;
+  }
+
+  &__texto {
+    margin-top: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
