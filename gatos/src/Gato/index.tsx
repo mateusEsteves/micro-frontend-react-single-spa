@@ -10,8 +10,10 @@ export default function Gato() {
   useEffect(() => {
     inicializarDados();
     async function inicializarDados() {
+      window.dispatchEvent(new CustomEvent("mostrarLoader"));
       const gato = await obterGato(gatoId);
       setDadosGato(gato);
+      window.dispatchEvent(new CustomEvent("esconderLoader"));
     }
   }, [gatoId]);
 

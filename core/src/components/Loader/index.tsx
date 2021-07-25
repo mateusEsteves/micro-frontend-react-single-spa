@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./loader.module.scss";
 
 export default function Loader() {
-  const [deveExibir, setDeveExibir] = useState(true);
+  const [deveExibir, setDeveExibir] = useState(false);
 
   useEffect(() => {
     const mostrarLoader = () => setDeveExibir(true);
