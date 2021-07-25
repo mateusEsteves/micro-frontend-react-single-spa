@@ -20,6 +20,6 @@ const Gatos = [
 
 export function obterGato(gatoId: number): Promise<any> {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(Gatos[gatoId]), 5000);
+    setTimeout(() => resolve(Gatos[gatoId - 1]), 5000);
   });
 }

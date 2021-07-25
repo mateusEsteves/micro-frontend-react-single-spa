@@ -82,6 +82,7 @@ module.exports = {
       library: { type: "var", name: "core" },
       remotes: {
         cachorros: "cachorros",
+        gatos: "gatos",
       },
       exposes: {
         "./history": "./src/shared/history",
