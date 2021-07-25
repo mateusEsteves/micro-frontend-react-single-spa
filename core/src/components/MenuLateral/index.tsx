@@ -18,6 +18,18 @@ export default function MenuLateral() {
             <Link to={"/cachorros/golden-retriever"}>Golden Retriever</Link>
           </li>
         </ul>
+        <li>Gatos:</li>
+        <ul>
+          <li>
+            <Link to={"/gatos/1"}>Um gato</Link>
+          </li>
+          <li>
+            <Link to={"/gatos/2"}>Outro gato</Link>
+          </li>
+          <li>
+            <Link to={"/gatos/3"}>Mais um gato</Link>
+          </li>
+        </ul>
       </ul>
     </aside>
   );

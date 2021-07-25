@@ -1,0 +1,14 @@
+.loader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  place-content: center center;
+
+  &__texto {
+    font-size: 2rem;
+    display: inline-block;
+    margin: auto;
+  }
+}
