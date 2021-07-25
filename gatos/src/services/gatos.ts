@@ -1,4 +1,3 @@
-import { useState } from "react";
 import gato1 from "../assets/gato-1.jpg";
 import gato2 from "../assets/gato-2.jpg";
 import gato3 from "../assets/gato-3.jpg";

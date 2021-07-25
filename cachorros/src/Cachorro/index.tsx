@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./cachorro.module.scss";
 
 interface CachorroProps {
@@ -7,6 +7,13 @@ interface CachorroProps {
 }
 
 export default function Cachorro({ imagem, descricao }: CachorroProps) {
+  useEffect(() => {
+    console.log("Montando o componente Cachorro");
+
+    return () => {
+      console.log("Desmontando o componente Cachorro");
+    };
+  }, []);
   return (
     <div className={styles.container}>
       <img src={imagem} className={styles.container__imagem} />

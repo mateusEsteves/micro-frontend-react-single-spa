@@ -17,6 +17,14 @@ export default function Gato() {
     }
   }, [gatoId]);
 
+  useEffect(() => {
+    console.log("Montando o componente Gato");
+
+    return () => {
+      console.log("Desmontando o componente Gato");
+    };
+  }, []);
+
   return dadosGato == null ? (
     <></>
   ) : (
