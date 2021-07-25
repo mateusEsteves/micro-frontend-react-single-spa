@@ -3,4 +3,13 @@
   background-color: blueviolet;
   width: 100%;
   grid-area: cabecalho;
+  display: flex;
+
+  &__titulo {
+    display: inline-block;
+    font-family: cursive;
+    font-size: 2rem;
+    color: burlywood;
+    margin: auto 42px;
+  }
 }
