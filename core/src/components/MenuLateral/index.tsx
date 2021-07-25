@@ -40,9 +40,7 @@ const linksCachorros = [
 function gerarLinks(links: Links[]) {
   return links.map(({ url, titulo }) => (
     <li>
-      <Link to={url} singleSpa={true}>
-        {titulo}
-      </Link>
+      <Link to={url}>{titulo}</Link>
     </li>
   ));
 }
